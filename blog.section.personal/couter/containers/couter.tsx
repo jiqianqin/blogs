@@ -6,7 +6,7 @@ import {increment, decrement, reset} from "../actions/counter";
 // 将属性转换到props中
 const mapStateToProps = (state) => {
     return {
-        personal: state.personal
+        counter: state.personal.counter,
     }
 };
 // 将方法转换到props中

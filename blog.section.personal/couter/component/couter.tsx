@@ -6,7 +6,7 @@ class Counter extends React.Component<any,any> {
         console.log(this.props);
         return (
             <div>
-                <div>当前计数为{this.props.personal.counter.count}</div>
+                <div>当前计数为{this.props.counter.count}</div>
                 <button onClick={() => {
                     this.props.increment();
                 }}>自增
