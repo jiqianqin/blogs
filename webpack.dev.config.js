@@ -29,9 +29,9 @@ const devConfig = {
         }]
     },
     devServer: {
-        contentBase: path.join(__dirname, './dist'),
+        contentBase: path.join(__dirname, "./dist"),
         historyApiFallback: true,
-        host: '0.0.0.0',
+        host: "0.0.0.0",
     },
     plugins:[
         new webpack.DefinePlugin({
@@ -42,8 +42,8 @@ const devConfig = {
 
 module.exports = merge({
     customizeArray(a, b, key) {
-        /*entry.app不合并，全替换*/
-        if (key === 'entry.app') {
+        /* entry.app不合并，全替换*/
+        if (key === "entry.app") {
             return b;
         }
         return undefined;

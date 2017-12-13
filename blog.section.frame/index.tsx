@@ -4,13 +4,14 @@ import {AppContainer} from 'react-hot-loader';
 import {Provider} from 'react-redux';
 import store from './redux/store';
 import {BrowserRouter as Router} from 'react-router-dom';
-import App from './components/app/app';
+// import App from './components/app/app';
+import Home from "./home";
 
 if (MOCK) {
     require('../blog.plugins.mock/mock');
 }
 
-renderWithHotReload(App);
+renderWithHotReload(Home);
 
 if (module.hot) {
     module.hot.accept('./router', () => {
