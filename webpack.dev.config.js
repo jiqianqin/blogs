@@ -10,7 +10,7 @@ const devConfig = {
         app: [
             "babel-polyfill",
             "react-hot-loader/patch",
-            path.join(__dirname, "./src/index.tsx")
+            path.join(__dirname, "./blog.section.frame/index.tsx")
         ]
     },
     output: {

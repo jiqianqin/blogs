@@ -1,26 +1,25 @@
 
-import { compose,lifecycle,withStateHandlers} from "recompose";
-import {connect} from 'react-redux';
-import {increment, decrement, reset} from '../actions/counter';14
+import {compose,lifecycle} from "recompose";
+import {connect} from "react-redux";
+import {increment, decrement, reset} from "../actions/counter";
 
-//将属性转换到props中
+// 将属性转换到props中
 const mapStateToProps = (state) => {
     return {
-        counter: state.counter,
-        userInfo: state.userInfo
+        personal: state.personal
     }
 };
-//将方法转换到props中
+// 将方法转换到props中
 const mapDispatchToProps = (dispatch) => {
     return {
         increment: () => {
-            dispatch(increment())
+            dispatch(increment());
         },
         decrement: () => {
-            dispatch(decrement())
+            dispatch(decrement());
         },
         reset: () => {
-            dispatch(reset())
+            dispatch(reset());
         }
     }
 };

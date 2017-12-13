@@ -1,13 +1,12 @@
-import React, {Component} from 'react';
+import * as React from "react";
+import  {hoc}  from "../containers/couter";
 
-import { hoc } from '../containers/couter';
-
-class Counter extends Component {
+class Counter extends React.Component<any,any> {
     render() {
         console.log(this.props);
         return (
             <div>
-                <div>当前计数为{this.props.counter.count}</div>
+                <div>当前计数为{this.props.personal.counter.count}</div>
                 <button onClick={() => {
                     this.props.increment();
                 }}>自增
@@ -25,4 +24,5 @@ class Counter extends Component {
     }
 }
 
-export default hoc(Counter);
+export const CounterHoc = hoc(Counter);
+export default CounterHoc;

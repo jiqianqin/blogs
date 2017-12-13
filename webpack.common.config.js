@@ -6,7 +6,7 @@ const commonConfig = {
     entry: {
         app: [
             "babel-polyfill",
-            path.join(__dirname, './src/index.tsx')
+            path.join(__dirname, './blog.section.frame/index.tsx')
         ],
         vendor: ['react', 'react-router-dom', 'redux', 'react-dom', 'react-redux']
     },
@@ -20,11 +20,11 @@ const commonConfig = {
         rules: [{
             test: /\.js$/,
             use: ['babel-loader?cacheDirectory=true'],
-            include: path.join(__dirname, 'src')
+            exclude: /node_modules/
         },{
             test: /\.tsx$/,
             use: ['ts-loader'],
-            include: path.join(__dirname, 'src')
+            exclude: /node_modules/
         }, {
             test: /\.(png|jpg|gif)$/,
             use: [{
@@ -38,7 +38,7 @@ const commonConfig = {
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: path.join(__dirname, 'src/index.html')
+            template: path.join(__dirname, './blog.section.frame/index.html')
         }),
         new webpack.HashedModuleIdsPlugin(),
         new webpack.optimize.CommonsChunkPlugin({
@@ -50,15 +50,7 @@ const commonConfig = {
     ],
 
     resolve: {
-        extensions: [".tsx", ".ts", ".js"],        
-        // alias: {
-        //     modules: path.join(__dirname, 'src/modules'),
-        //     common: path.join(__dirname, 'src/common'),
-        //     components: path.join(__dirname, 'src/components'),
-        //     libs:path.join(__dirname, 'src/libs'),
-        //     routers: path.join(__dirname, 'src/routers'),
-        //     mock: path.join(__dirname, 'mock')
-        // }
+        extensions: [".tsx", ".ts", ".js"],
     }
 };
 
