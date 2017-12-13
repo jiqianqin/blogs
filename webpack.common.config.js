@@ -1,3 +1,4 @@
+const CopyWebpackPlugin = require('copy-webpack-plugin'); //拷贝资源插件
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
@@ -36,6 +37,10 @@ const commonConfig = {
         }]
     },
     plugins: [
+        // 拷贝资源到指定目录下
+        new CopyWebpackPlugin([
+            {from: './blog.section.frame/assects', to: 'assects'},
+        ]),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: path.join(__dirname, './blog.section.frame/index.html')

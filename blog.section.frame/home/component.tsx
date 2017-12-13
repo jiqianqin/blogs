@@ -2,6 +2,7 @@ import * as React from "react";
 import "./style.scss";
 import { IconComments } from "../../blog.plugins.common/icons";
 
+
 export class Home extends React.Component {
     render() {
         return (
@@ -20,20 +21,28 @@ export class Home extends React.Component {
                         </section>
                         <div className="menu">
                             <span className="menu-item">
-                                <IconComments type="blog" width = {35} height={35} />
-                                bolg
+                                <span className="icon-wrap">
+                                    <IconComments type="blog" width = {35} height={35} />
+                                </span>
+                                <span className="tip">blog</span>
                             </span>
                             <span className="menu-item">
-                                <IconComments type="newest" width = {30} height={30} />
-                                最新发布
+                                <span className="icon-wrap">
+                                    <IconComments type="newest" width = {30} height={30} />
+                                </span>
+                                <span className="tip">最新发布</span>
                             </span>
                             <span className="menu-item">
-                                <IconComments type="recommend" width = {35} height={35} />
-                                博主推荐
+                                <span className="icon-wrap">
+                                    <IconComments type="recommend" width = {30} height={30} />
+                                </span>
+                                <span className="tip">博主推荐</span>
                             </span>
                             <span className="menu-item">
-                                <IconComments type="contact" width ={30} height={30} />
-                                联系我
+                                <span className="icon-wrap">
+                                    <IconComments type="contact" width ={28} height={28} />
+                                </span>
+                                <span className="tip">联系我</span>
                              </span>
                         </div>
                     </div>
