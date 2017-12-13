@@ -49,7 +49,7 @@ export class Home extends React.Component {
                
                 <section id="about">
                     <h1 className="arrow">A little<span> about </span> this Web</h1>
-                    <p>该网站仅用于个人使用，不负任何法律责任。在该网站中，主要记录了个人技术博客，以及转载了一些他人好的技术文档。同时，记录了一些个人感觉比较好的插件，以及自己封装的一些插件。</p>
+                    <p>该网站仅用于个人使用，不做商业用途，不负任何法律责任。在该网站中，主要记录了个人技术博客，以及转载了一些他人好的技术文档。同时，记录了一些个人感觉比较好的插件，以及自己封装的一些插件。</p>
                 </section>
             </div>
         )
