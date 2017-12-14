@@ -1,5 +1,9 @@
 {
     "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "common-plugins": ["./blog.plugins.common"]
+        },
         "target": "es6",
         "jsx": "react",
         "moduleResolution": "node",

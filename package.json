@@ -12,6 +12,7 @@
     "recompose": "^0.26.0",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
+    "swiper": "^4.0.7",
     "typescript": "^2.6.2"
   },
   "devDependencies": {

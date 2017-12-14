@@ -56,6 +56,9 @@ const commonConfig = {
 
     resolve: {
         extensions: [".tsx", ".ts", ".js"],
+        alias: {
+            'common-plugins': './blog.plugins.common',
+        }
     }
 };
 

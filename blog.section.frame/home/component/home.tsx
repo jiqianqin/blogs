@@ -1,14 +1,17 @@
 import * as React from "react";
-import "./style.scss";
-import {IconComments} from "../../blog.plugins.common/icons";
+import {IconComments} from "../../../blog.plugins.common";
+import {IProps} from "../constants/home";
+import {hoc} from "../containers/home";
+import "../styles/style.scss";
 
-export class Home extends React.Component {
+export class Home extends React.Component < IProps,
+any > {
     render() {
         return (
-            <div id="home-content">
-                <section className="home-bg"> 
-                </section>
-                    <div className="intro-overlay">
+            <div id="home-content" className="swiper-container">
+                <section className="home-bg"></section>
+                <div className="swiper-wrapper">
+                    <section className="intro-overlay swiper-slide">
                         <h5>Hello, World.</h5>
                         <h1>Welcome To My Blog</h1>
                         <p className="intro-position">
@@ -16,9 +19,14 @@ export class Home extends React.Component {
                             <span>插件整理</span>
                             <span>交流经验</span>
                         </p>
-                        <section id="next" className="demo">
-                            <a href="#section04"></a>
-                        </section>
+                        <div id="next">
+                            <a
+                                onClick={() => {
+                                this
+                                    .props
+                                    .goNext()
+                            }}></a>
+                        </div>
                         <div className="menu">
                             <span className="menu-item">
                                 <span className="icon-wrap">
@@ -45,13 +53,20 @@ export class Home extends React.Component {
                                 <span className="tip">联系我</span>
                             </span>
                         </div>
-                    </div>
-               
-                <section id="about">
-                    <h1 className="arrow">A little<span> about </span> this Web</h1>
-                    <p>该网站仅用于个人使用，不做商业用途，不负任何法律责任。在该网站中，主要记录了个人技术博客，以及转载了一些他人好的技术文档。同时，记录了一些个人感觉比较好的插件，以及自己封装的一些插件。</p>
-                </section>
+                    </section>
+
+                    <section id="about" className="swiper-slide">
+                        <h1 className="arrow">A little<span>
+                                about
+                            </span>
+                            this Web</h1>
+                        <p>该网站仅用于个人使用，不做商业用途，不负任何法律责任。在该网站中，主要记录了个人技术博客，以及转载了一些他人好的技术文档。同时，记录了一些个人感觉比较好的插件，以及自己封装的一些插件。</p>
+                    </section>
+                </div>
             </div>
         )
     }
 }
+
+export const HomeHOC = hoc(Home);
+export default HomeHOC;
