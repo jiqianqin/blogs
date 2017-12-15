@@ -17,7 +17,7 @@ any > {
                     <span>交流经验</span>
                 </p>
                 <div id="next">
-                    <a onClick={() => {this.props .goNext() }}></a>
+                    <a onClick={() => {this.props.goNext() }}></a>
                 </div>
                 <div className="menu">
                     <span className="menu-item">

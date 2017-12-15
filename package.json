@@ -47,6 +47,18 @@
     "webpack-dev-server": "^2.9.5",
     "webpack-merge": "^4.1.1"
   },
+  "optionalDependencies": {
+    "@types/classnames": "^2.2.0",
+    "@types/express-serve-static-core": "^4.0.44",
+    "@types/hammerjs": "^2.0.34",
+    "@types/jweixin": "^1.0.0",
+    "@types/node": "^7.0.18",
+    "@types/react": "^15.0.24",
+    "@types/react-dom": "^15.5.0",
+    "@types/react-router": "^4.0.9",
+    "@types/react-router-dom": "^4.0.4",
+    "@types/recompose": "^0.22.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-build": "webpack --config webpack.dev.config.js",

@@ -3,7 +3,6 @@ import  {hoc}  from "../containers/couter";
 
 class Counter extends React.Component<any,any> {
     render() {
-        console.log(this.props);
         return (
             <div>
                 <div>当前计数为{this.props.counter.count}</div>
