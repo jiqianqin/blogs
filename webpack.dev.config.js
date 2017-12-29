@@ -1,4 +1,5 @@
 const merge = require("webpack-merge");
+const pxtorem = require('postcss-pxtorem');
 const path = require("path");
 const webpack = require("webpack");
 
@@ -25,7 +26,18 @@ const devConfig = {
              *   3、将 Sass 编译成 CSS
              *   4、允许你使用未来的 CSS 特性
              */
-            use: ["style-loader","css-loader","sass-loader", "postcss-loader"]
+            use: ["style-loader","css-loader","sass-loader",{
+                loader:"postcss-loader",
+                options:{
+                    ident:"postcss",
+                    plugins:[pxtorem({
+                            rootValue: 75,
+                            propWhiteList: [],
+                          })
+                    ]
+                }
+            }],
+        
         }]
     },
     devServer: {
@@ -36,8 +48,8 @@ const devConfig = {
     plugins:[
         new webpack.DefinePlugin({
                MOCK: true
-        })
-    ]
+        }),
+    ],
 };
 
 module.exports = merge({
